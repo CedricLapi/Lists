@@ -18,9 +18,18 @@ class LinkedList{
 
         let new_node = new Node(val);
 
+
+        if(!this.head){
+            this.head = new_node;
+            return this.head;
+
+        } else{
+
             new_node.next = this.head;
             this.head = new_node;
             return this.head;
+
+        }
 
         
     }
@@ -33,3 +42,7 @@ list.addFront(5);
 list.addFront(73);
 
 console.log(list);
+
+
+
+
