@@ -39,23 +39,33 @@ class LinkedList{
         if(!current_node){
             return;
 
-        } else if(current_node.data === val ){
+        } 
+        
+        if(current_node.data === val ){
 
             this.head = current_node.next;
+            
+
             return this.head;
             
-        } else{
+        } 
+        
+        
+        
 
             while(current_node.data !== val){
             previous_node = current_node;
             current_node = current_node.next;
-
         }
 
-    }
+
+        
+
+        previous_node.next = current_node.next;
 
     
-    previous_node.next = current_node.next;
+
+    
 }
 }
 
