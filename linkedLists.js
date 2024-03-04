@@ -56,6 +56,21 @@ class LinkedList {
         }
         return this.head.data;
     }
+
+    display() {
+        let result = '';
+        let runner = this.head;
+
+        while (runner) {
+            result += runner.data.toString() + ' ';
+            runner = runner.next;
+        }
+
+        return result.trim();
+    }
+
+
+    
 }
 
 var list = new LinkedList();
@@ -63,7 +78,13 @@ var list = new LinkedList();
 list.addFront(6);
 list.addFront(7);
 list.addFront(8);
-list.remove(8);
+//list.remove(8);
 
 //console.log(list.remove(8)); 
-console.log(list.value()); 
+console.log(list.display()); 
+
+
+
+
+
+
